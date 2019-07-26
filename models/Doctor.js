@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const doctorSchema = new Schema({
-  type: {
-    type: String,
-    required: true
-  },
   name: {
     type: String,
     required: true
@@ -17,7 +13,10 @@ const doctorSchema = new Schema({
   proof: {
     data: Buffer,
     type : String,
-    required: true
+  },
+  password : {
+    type : String,
+    required : true
   },
   date: {
     type: Date,
